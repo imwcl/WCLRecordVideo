@@ -83,8 +83,8 @@
 - (BOOL)encodeFrame:(CMSampleBufferRef) sampleBuffer isVideo:(BOOL)isVideo {
     //数据是否准备写入
     if (CMSampleBufferDataIsReady(sampleBuffer)) {
-        //写入状态为未知
-        if (_writer.status == AVAssetWriterStatusUnknown) {
+        //写入状态为未知,保证视频先写入
+        if (_writer.status == AVAssetWriterStatusUnknown && isVideo) {
             //获取开始写入的CMTime
             CMTime startTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
             //开始写入

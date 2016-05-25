@@ -36,8 +36,6 @@
 @property (atomic, assign) BOOL isCapturing;//正在录制
 @property (atomic, assign) BOOL isPaused;//是否暂停
 @property (atomic, assign) BOOL discont;//是否中断
-@property (atomic, assign) BOOL hasVideoData;//是否有视频数据
-@property (atomic, assign) BOOL hasAudioData;//是否有音频数据
 @property (atomic, assign) CMTime startTime;//开始录制的时间
 @property (atomic, assign) CGFloat currentRecordTime;//当前录制时间
 
@@ -77,8 +75,6 @@
     self.isCapturing = NO;
     self.isPaused = NO;
     self.discont = NO;
-    self.hasVideoData = NO;
-    self.hasAudioData = NO;
     [self.recordSession startRunning];
 }
 //关闭录制功能
@@ -419,15 +415,11 @@
         if (!self.isCapturing  || self.isPaused) {
             return;
         }
-        if (captureOutput == self.videoOutput) {
-            self.hasVideoData = YES;
-        }else {
-            self.hasAudioData = YES;
+        if (captureOutput != self.videoOutput) {
             isVideo = NO;
         }
-
         //初始化编码器，当有音频和视频参数时创建编码器
-        if ((self.recordEncoder == nil) && (self.hasAudioData && self.hasVideoData) && !isVideo) {
+        if ((self.recordEncoder == nil) && !isVideo) {
             CMFormatDescriptionRef fmt = CMSampleBufferGetFormatDescription(sampleBuffer);
             [self setAudioFormat:fmt];
             NSString *videoName = [self getUploadFile_type:@"video" fileType:@"mp4"];
