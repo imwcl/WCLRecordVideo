@@ -5,6 +5,7 @@
 //  Created by 王崇磊 on 16/5/17.
 //  Copyright © 2016年 W_C__L. All rights reserved.
 //
+// 博客地址：http://blog.csdn.net/wang631106979/article/details/51498009
 
 #import "WCLRecordEncoder.h"
 
