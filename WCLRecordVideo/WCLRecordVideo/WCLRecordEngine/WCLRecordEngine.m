@@ -131,6 +131,13 @@
                 [self.recordEncoder finishWithCompletionHandler:^{
                     self.isCapturing = NO;
                     self.recordEncoder = nil;
+                    self.startTime = CMTimeMake(0, 0);
+                    self.currentRecordTime = 0;
+                    if ([self.delegate respondsToSelector:@selector(recordProgress:)]) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.delegate recordProgress:self.currentRecordTime/self.maxRecordTime];
+                        });
+                    }
                     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
                         [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:url];
                     } completionHandler:^(BOOL success, NSError * _Nullable error) {

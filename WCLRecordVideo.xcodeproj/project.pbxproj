@@ -317,7 +317,7 @@
 				INFOPLIST_FILE = WCLRecordVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = WCL.WCLRecordVideo;
+				PRODUCT_BUNDLE_IDENTIFIER = WCL.WCLRecordVideo.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -332,7 +332,7 @@
 				INFOPLIST_FILE = WCLRecordVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = WCL.WCLRecordVideo;
+				PRODUCT_BUNDLE_IDENTIFIER = WCL.WCLRecordVideo.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
