@@ -1,9 +1,27 @@
 //
-//  WCLRecordEngine.h
-//  Youqun
 //
-//  Created by 王崇磊 on 16/5/17.
-//  Copyright © 2016年 W_C__L. All rights reserved.
+//  WCLRecordEngine.h
+//  WCL
+//
+// **************************************************
+// *                                  _____         *
+// *         __  _  __     ___        \   /         *
+// *         \ \/ \/ /    / __\       /  /          *
+// *          \  _  /    | (__       /  /           *
+// *           \/ \/      \___/     /  /__          *
+// *                               /_____/          *
+// *                                                *
+// **************************************************
+//  Github  :https://github.com/631106979
+//  HomePage:https://imwcl.com
+//  CSDN    :http://blog.csdn.net/wang631106979
+//
+//  Created by 王崇磊 on 16/9/14.
+//  Copyright © 2016年 王崇磊. All rights reserved.
+//
+// @class WCLRecordEngine
+// @abstract 视频录制类
+// @discussion 视频录制类
 //
 
 #import <Foundation/Foundation.h>

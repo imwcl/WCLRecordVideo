@@ -1,9 +1,27 @@
 //
-//  WCLRecordEngine.m
-//  Youqun
 //
-//  Created by 王崇磊 on 16/5/17.
-//  Copyright © 2016年 W_C__L. All rights reserved.
+//  WCLRecordEngine.m
+//  WCL
+//
+// **************************************************
+// *                                  _____         *
+// *         __  _  __     ___        \   /         *
+// *         \ \/ \/ /    / __\       /  /          *
+// *          \  _  /    | (__       /  /           *
+// *           \/ \/      \___/     /  /__          *
+// *                               /_____/          *
+// *                                                *
+// **************************************************
+//  Github  :https://github.com/631106979
+//  HomePage:https://imwcl.com
+//  CSDN    :http://blog.csdn.net/wang631106979
+//
+//  Created by 王崇磊 on 16/9/14.
+//  Copyright © 2016年 王崇磊. All rights reserved.
+//
+// @class WCLRecordEngine
+// @abstract 视频录制类
+// @discussion 视频录制类
 //
 // 博客地址：http://blog.csdn.net/wang631106979/article/details/51498009
 
@@ -12,7 +30,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
 
-@interface WCLRecordEngine ()<AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDataOutputSampleBufferDelegate> {
+@interface WCLRecordEngine ()<AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDataOutputSampleBufferDelegate, CAAnimationDelegate> {
     CMTime _timeOffset;//录制的偏移CMTime
     CMTime _lastVideo;//记录上一次视频数据文件的CMTime
     CMTime _lastAudio;//记录上一次音频数据文件的CMTime
